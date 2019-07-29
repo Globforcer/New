@@ -1,0 +1,95 @@
+﻿@model PowerBIEmbedded_AppOwnsData.Models.EmbedConfig
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://npmcdn.com/es6-promise@3.2.1"></script>
+<script src="~/scripts/powerbi.js"></script>
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div id="errorWrapper">
+        <h2>
+            Error
+        </h2>
+        @Model.ErrorMessage
+    </div>
+
+    return;
+}
+<table>
+<tr>
+    <td></td>
+    <td><font size="3" color="red">Embedded Dashboard</font></td>
+    <td>
+        <a href="~/Home/Index">Home</a>&nbsp;&nbsp;
+        <a href="~/Home/Index">Logout</a>&nbsp;&nbsp;
+        <a href="~/Home/Index">Help</a>
+    </td>
+</tr>
+<tr>
+    <td width="5%">
+        <font size="2" color="blue">
+            <a id="btnEmbedReport" href="~/Home/EmbedReport">Click Here to Embed a Report </a>
+            <br />
+            <br />
+            <a id="btnEmbedTile" href="~/Home/EmbedTile">Click Here to Embed a Tile</a>
+            <br />
+            <br />
+        </font>
+    </td>
+    <td width="75%">
+        <div id="dashboardContainer"></div>
+        <!--
+        <div class="infoBox">
+            Code is in files:<br />
+            1) HomeController.cs<br />
+            2) EmbedDashboard.cshtml
+        </div>
+
+        @Html.Partial("LiveDemoLink")
+            -->
+        <script>
+    // Read embed application token from Model
+    var accessToken = "@Model.EmbedToken.Token";
+
+    // Read embed URL from Model
+    var embedUrl = "@Html.Raw(Model.EmbedUrl)";
+
+    // Read dashboard Id from Model
+    var embedDashboardId = "@Model.Id";
+
+    // Get models. models contains enums that can be used.
+    var models = window['powerbi-client'].models;
+
+    // Embed configuration used to describe the what and how to embed.
+    // This object is used when calling powerbi.embed.
+    // This also includes settings and options such as filters.
+    // You can find more information at https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details.
+    var config = {
+        type: 'dashboard',
+        tokenType: models.TokenType.Embed,
+        accessToken: accessToken,
+        embedUrl: embedUrl,
+        id: embedDashboardId
+    };
+
+    // Get a reference to the embedded dashboard HTML element
+    var dashboardContainer = $('#dashboardContainer')[0];
+
+    // Embed the dashboard and display it within the div container.
+    var dashboard = powerbi.embed(dashboardContainer, config);
+        </script>
+    </td>
+    <td width="20%">
+        <font size="3" color="red">Dashboard Annotation:</font> <br />
+        <div>
+            The Iris flower data set or Fisher's Iris data set is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis.[1] It is sometimes called Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species.[2] Two of the three species were collected in the Gaspé Peninsula "all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus".[3]
+            The data set consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other.
+        </div>
+        <br/>
+        <textarea rows="4" cols="50">
+                Enter your comments: 
+            </textarea>
+    </td>
+</tr>
+</table>
