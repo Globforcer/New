@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- tas-pipeline
 
 pool:
   vmImage: 'ubuntu-latest'
