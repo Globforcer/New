@@ -1,0 +1,111 @@
+body{background:  #f6f6f8;}
+.content{background:#ffffff;	height: 600px;}
+.bg-upnav{
+	background-color: #3c3c3b;
+  }
+  .bg-bnav{
+	background-color: #333333;
+  }
+
+.dashboard {
+    margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+.modal-dialog
+{
+	width: 77%;
+}
+
+#modal2_body{
+	height: 450px;
+	overflow-y: auto;
+}
+#modal4_body
+{
+	height: 450px;
+	overflow-y: auto;
+}
+.modal-body{
+	
+	overflow-y: auto;
+	font-family: 'Arial';
+	font-size: 16px;
+	color: #333333;
+			
+}
+.modal-body p
+{
+	font-family: 'Arial';
+	font-style: bold;	
+	font-size: 16px;
+}
+#modal-4-dialog
+{
+	margin-left: 25%;
+}
+#modal-4-content
+{
+	width: 180%;
+}
+.modal4data
+{
+	font-family: 'Arial Italic', 'Arial';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px
+}
+.modal4datatxt
+{
+	padding-left: 10px;
+}
+.modal .modal-footer button {
+	float:left;
+  }
+  .white-tooltip + .tooltip > .tooltip-inner {background-color: #f00;}
+  button.btn.nextbtn {
+    background: #ffe402;
+}
+
+button.btn.cancelbtn{
+	background: #666666;
+	color: #ffffff;
+}
+.circle {
+	background-color:#e0e0d1;
+	height: 38px;
+	width: 38px;
+	border-radius: 100%;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+  } 
+
+  .initials {
+	position: relative;
+	font-size: 12px; /* 50% of parent */
+	line-height: 50px; /* 50% of parent */
+	color: #fff;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+  }
+  .tooltip-inner {
+	background-color:#ffffff;
+	color: #000;
+}
+.navbrandtxt 
+{font-size: 12px;
+	color: #FFFFFF;}
+.loginnav {
+	font-family: 'Arial Italic', 'Arial';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+	color: #C0C0C0;
+	padding: 8px 8px;
+}
+img {
+	vertical-align: sub;
+}
