@@ -1,0 +1,23 @@
+@using System.Runtime.InteropServices
+@using System.Security.Principal
+
+<ul class="navbar-nav">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <span class="nav-text nav-link text-light">Hello @ViewBag.Username!</span>
+        </li>
+        <li>
+            <div class="circle">
+                <span class="initials">@ViewBag.UserInitials</span>
+            </div>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="AzureAD" asp-controller="Account" asp-action="SignIn">Sign in</a>
+        </li>
+
+    }
+</ul>
