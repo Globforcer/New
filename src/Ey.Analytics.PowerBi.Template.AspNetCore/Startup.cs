@@ -43,8 +43,7 @@ namespace  Ey.Analytics.PowerBI.Templates
             var projectUxConfig = new ProjectUXConfig();
             Configuration.Bind("ProjectUx", projectUxConfig);
             services.AddSingleton(projectUxConfig);
-
-
+            
             services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
                 .AddAzureAD(options => Configuration.Bind("WebApp:AzureAd", options));
 
