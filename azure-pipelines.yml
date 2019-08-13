@@ -1,0 +1,20 @@
+pool:
+  name: Hosted VS2017
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  inputs:
+    projects: '**/*.sln'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: publish
+    arguments: '-r ubuntu.16.10-x64 --self-contained true'
+
+- task: AzureRmWebAppDeployment@4
+  displayName: 'Azure App Service Deploy: tdanalytics'
+  inputs:
+    azureSubscription: 'SPN-ADAnalytics'
+    WebAppName: tdanalytics
+  enabled: false
