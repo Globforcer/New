@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.10-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
     <UserSecretsId>aspnet-Analytics.Demo.EmbeddedPowerBI-ebf86bd7-fb8c-4031-87a4-e8fc3ba90634</UserSecretsId>
     <WebProject_DirectoryAccessLevelKey>1</WebProject_DirectoryAccessLevelKey>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RuntimeFrameworkName>Microsoft.AspNetCore.App</RuntimeFrameworkName>
     <AssemblyName>Ey.Analytics.PowerBI.Templates</AssemblyName>
     <RootNamespace> Ey.Analytics.PowerBI.Templates</RootNamespace>
   </PropertyGroup>

@@ -17,4 +17,4 @@ steps:
   inputs:
     azureSubscription: 'SPN-ADAnalytics'
     WebAppName: tdanalytics
-  enabled: false
+  enabled: true
