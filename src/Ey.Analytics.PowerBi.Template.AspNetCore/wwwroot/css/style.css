@@ -5,6 +5,7 @@ body {
 .content {
     background: #ffffff;
     height: 100%;
+    width: 100%;
 }
 
 .bg-upnav {
@@ -133,7 +134,10 @@ img {
 #embedContainer {
     padding: 10px 10px 10px 10px;
     height: 100%;
-    max-height: 1100px;
     width: 100%;
-    max-width: 3300px;
+}
+
+.fill {
+    min-height: 100%;
+    height: 100%;
 }
