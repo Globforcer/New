@@ -22,7 +22,7 @@ html {
 @media (min-width: 1200px) {
     .container {
         max-width: 3400px;
-        max-height: 1380px;
+        max-height: 1100px;
     }
 }
 

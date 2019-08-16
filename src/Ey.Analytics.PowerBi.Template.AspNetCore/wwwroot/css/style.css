@@ -132,9 +132,9 @@ img {
 
 #embedContainer {
     padding: 10px 10px 10px 10px;
-    height: 750px;
+    max-height: 1100px;
     width: 100%;
-    max-width: 1900px;
+    max-width: 3300px;
 }
 
 
