@@ -21,7 +21,8 @@ html {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1900px;
+        max-width: 3400px;
+        max-height: 1380px;
     }
 }
 
