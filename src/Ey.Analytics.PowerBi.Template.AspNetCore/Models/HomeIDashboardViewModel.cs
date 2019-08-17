@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace  Ey.Analytics.PowerBI.Templates.Models
 {
-    public class HomeDashboardViewModel : ViewModelBase
+    public class HomeIndexViewModel : ViewModelBase
     {
         public EmbedConfig EmbedConfig { get; set; }
     }

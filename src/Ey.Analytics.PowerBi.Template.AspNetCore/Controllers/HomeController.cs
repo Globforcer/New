@@ -22,15 +22,14 @@ namespace Ey.Analytics.PowerBI.Templates.Controllers
             this.uxConfig = uxConfig;
         }
 
-
         public async Task<IActionResult> Index()
         {
             var embedResult = await m_embedService.EmbedReport(null, null);
-            var vm = new HomeDashboardViewModel()
+            var vm = new HomeIndexViewModel()
             {
                 ProjectDisplayName = uxConfig.ProjectDisplayName,
-                AppTitle=uxConfig.AppTitle,
-                ReportDisplayName=uxConfig.ReportDisplayName,
+                AppTitle = uxConfig.AppTitle,
+                ReportDisplayName = uxConfig.ReportDisplayName,
                 UserInitials = GetUserInititials(GetUserName()),
                 Username = GetUserName(),
                 EmbedConfig = m_embedService.EmbedConfig
