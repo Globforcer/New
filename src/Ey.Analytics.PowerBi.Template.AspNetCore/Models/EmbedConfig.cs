@@ -1,7 +1,7 @@
 ﻿using Microsoft.PowerBI.Api.V2.Models;
 using System;
 
-namespace  Ey.Analytics.PowerBI.Templates.Models
+namespace Ey.Analytics.PowerBI.Templates.Models
 {
     public class EmbedConfig
     {
@@ -29,6 +29,8 @@ namespace  Ey.Analytics.PowerBI.Templates.Models
         public string Username { get; set; }
         public string UserInitials { get; set; }
         public string ProjectDisplayName { get; set; }
+        public bool FilterPaneEnabled { get; set; }
+        public bool NavContentPaneEnabled { get; set; }
 
         public string Roles { get; set; }
 

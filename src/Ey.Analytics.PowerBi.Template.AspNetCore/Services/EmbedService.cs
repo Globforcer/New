@@ -2,7 +2,7 @@
 using Microsoft.PowerBI.Api.V2;
 using Microsoft.PowerBI.Api.V2.Models;
 using Microsoft.Rest;
-using  Ey.Analytics.PowerBI.Templates.Models;
+using Ey.Analytics.PowerBI.Templates.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.Extensions.Configuration;
 
-namespace  Ey.Analytics.PowerBI.Templates.Services
+namespace Ey.Analytics.PowerBI.Templates.Services
 {
     public class EmbedService : IEmbedService
     {
@@ -34,7 +34,11 @@ namespace  Ey.Analytics.PowerBI.Templates.Services
         public EmbedService(PowerBiConfig configuration)
         {
             m_tokenCredentials = null;
-            m_embedConfig = new EmbedConfig();
+            m_embedConfig = new EmbedConfig()
+            {
+                NavContentPaneEnabled = configuration.Workspace.NavContentPaneEnabled,
+                FilterPaneEnabled = configuration.Workspace.FilterPaneEnabled
+            };
             m_tileEmbedConfig = new TileEmbedConfig();
             m_powerBiConfig = configuration;
         }

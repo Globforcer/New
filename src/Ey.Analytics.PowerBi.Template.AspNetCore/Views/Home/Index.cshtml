@@ -241,7 +241,7 @@
 </div>
 <div class="content">
 
-    <div id="embedContainer" ></div>
+    <div id="embedContainer"></div>
 
     <script>
         function displayReport() {
@@ -257,6 +257,9 @@
             // Get models. models contains enums that can be used.
             var models = window['powerbi-client'].models;
 
+            var filterPaneEnabled = ("@Model.EmbedConfig.FilterPaneEnabled" === "true");
+            var navContentPaneEnabled = ("@Model.EmbedConfig.NavContentPaneEnabled" === "true");
+
             // Embed configuration used to describe the what and how to embed.
             // This object is used when calling powerbi.embed.
             // This also includes settings and options such as filters.
@@ -270,8 +273,8 @@
                 pageView: "actualSize",
                 permissions: models.Permissions.All,
                 settings: {
-                    filterPaneEnabled: true,
-                    navContentPaneEnabled: true
+                    filterPaneEnabled: filterPaneEnabled,
+                    navContentPaneEnabled: navContentPaneEnabled
                 }
             };
 

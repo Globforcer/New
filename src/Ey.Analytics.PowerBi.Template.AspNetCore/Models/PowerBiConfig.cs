@@ -22,6 +22,8 @@ namespace  Ey.Analytics.PowerBI.Templates.Models
         public string GroupId { get; set; }
         public string ReportId { get; set; }
         public string AuthenticationMode { get; set; }
+        public bool FilterPaneEnabled { get; set; }
+        public bool NavContentPaneEnabled { get; set; }
         public ServicePrincipalConfig ServicePrincipal { get; set; }
         public MasterUserConfig MasterUser { get; set; }
     }

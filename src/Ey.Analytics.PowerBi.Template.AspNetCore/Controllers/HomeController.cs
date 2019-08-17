@@ -29,6 +29,8 @@ namespace Ey.Analytics.PowerBI.Templates.Controllers
             var vm = new HomeDashboardViewModel()
             {
                 ProjectDisplayName = uxConfig.ProjectDisplayName,
+                AppTitle=uxConfig.AppTitle,
+                ReportDisplayName=uxConfig.ReportDisplayName,
                 UserInitials = GetUserInititials(GetUserName()),
                 Username = GetUserName(),
                 EmbedConfig = m_embedService.EmbedConfig
@@ -38,6 +40,8 @@ namespace Ey.Analytics.PowerBI.Templates.Controllers
             ViewBag.Username = vm.Username;
             ViewBag.UserInitials = vm.UserInitials;
             ViewBag.ProjectDisplayName = vm.ProjectDisplayName;
+            ViewBag.AppTitle = vm.AppTitle;
+            ViewBag.ReportDisplayName = vm.ReportDisplayName;
 
             return View(vm);
 

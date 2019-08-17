@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Analytics.Demo.EmbeddedPowerBI</title>
+    <title>@ViewData["Title"] - @ViewBag.ReportDisplayName</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -76,7 +76,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-upnav" id="default">
             <a class="navbar-brand" href="#">
                 <img src="~/img/eoy-nav.png" class="eyimg" alt="" style="width:34px;height:34px; "><img src="~/img/separator.png" alt="">
-                <span class="navbrandtxt">Client Technology Platform-Power BI dashboards</span>
+                <span class="navbrandtxt">@ViewBag.AppTitle</span>
             </a>
             <div class="navbar-nav ml-auto">
                 <partial name="_LoginPartial" />

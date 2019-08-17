@@ -9,5 +9,7 @@ namespace  Ey.Analytics.PowerBI.Templates.Models
     {
         public string ProjectDisplayName { get; set; }
         public string ReportDisplayName { get; set; }
+        public string AppTitle { get; set; }
+
     }
 }
