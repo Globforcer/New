@@ -257,8 +257,8 @@
             // Get models. models contains enums that can be used.
             var models = window['powerbi-client'].models;
 
-            var filterPaneEnabled = ("@Model.EmbedConfig.FilterPaneEnabled" === "true");
-            var navContentPaneEnabled = ("@Model.EmbedConfig.NavContentPaneEnabled" === "true");
+            var filterPaneEnabled = ("@Model.EmbedConfig.FilterPaneEnabled".toLowerCase() === "true");
+            var navContentPaneEnabled = ("@Model.EmbedConfig.NavContentPaneEnabled".toLowerCase() === "true");
 
             // Embed configuration used to describe the what and how to embed.
             // This object is used when calling powerbi.embed.
