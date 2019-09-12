@@ -3,8 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace AdvanceAnalytics_WebTemplate
 {
@@ -52,6 +55,18 @@ namespace AdvanceAnalytics_WebTemplate
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
+            });
+
+            var provider = new FileExtensionContentTypeProvider();
+            // Add new mappings
+            provider.Mappings[".myapp"] = "application/x-msdownload";
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+            Path.Combine(Directory.GetCurrentDirectory(), "ClientApp", "img")),
+                RequestPath = "/img",
+                ContentTypeProvider = provider
             });
 
             app.UseSpa(spa =>
