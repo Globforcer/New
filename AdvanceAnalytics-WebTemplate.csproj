@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="AdvanceAnalytics-WebTemplate.Logic\AdvanceAnalytics-WebTemplate.Logic.csproj" />
+    <ProjectReference Include="AdvanceAnalytics-WebTemplate.Models\AdvanceAnalytics-WebTemplate.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
