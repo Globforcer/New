@@ -418,3 +418,6 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/web,linux,windows,visualstudio,visualstudiocode
+
+# Local debug files
+appSettings.Development.json
