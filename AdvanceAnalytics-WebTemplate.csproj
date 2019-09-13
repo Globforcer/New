@@ -21,8 +21,16 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="AdvanceAnalytics-WebTemplate.Logic\**" />
+    <Compile Remove="AdvanceAnalytics-WebTemplate.Models\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="AdvanceAnalytics-WebTemplate.Logic\**" />
+    <Content Remove="AdvanceAnalytics-WebTemplate.Models\**" />
+    <EmbeddedResource Remove="AdvanceAnalytics-WebTemplate.Logic\**" />
+    <EmbeddedResource Remove="AdvanceAnalytics-WebTemplate.Models\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="AdvanceAnalytics-WebTemplate.Logic\**" />
+    <None Remove="AdvanceAnalytics-WebTemplate.Models\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
