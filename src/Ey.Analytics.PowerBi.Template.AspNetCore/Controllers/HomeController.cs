@@ -10,7 +10,8 @@ using Ey.Analytics.PowerBI.Templates.Services;
 
 namespace Ey.Analytics.PowerBI.Templates.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = "WebViewerRoleOnly")]
+    //[Authorize]
     public class HomeController : Controller
     {
         private readonly IEmbedService m_embedService;

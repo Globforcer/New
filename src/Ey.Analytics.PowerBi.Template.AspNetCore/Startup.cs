@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using  Ey.Analytics.PowerBI.Templates.Models;
+using Ey.Analytics.PowerBI.Templates.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.AzureAD.UI;
 using Microsoft.AspNetCore.Authorization;
@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace  Ey.Analytics.PowerBI.Templates
+namespace Ey.Analytics.PowerBI.Templates
 {
     public class Startup
     {
@@ -43,9 +43,19 @@ namespace  Ey.Analytics.PowerBI.Templates
             var projectUxConfig = new ProjectUXConfig();
             Configuration.Bind("ProjectUX", projectUxConfig);
             services.AddSingleton(projectUxConfig);
-            
+
+            var webAppAzureAdConfig = new AzureAdConfig();
+            Configuration.Bind("WebApp:AzureAD", webAppAzureAdConfig);
+            services.AddSingleton(webAppAzureAdConfig);
+
             services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
                 .AddAzureAD(options => Configuration.Bind("WebApp:AzureAd", options));
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("WebViewerRoleOnly",
+                    policy => policy.RequireClaim("groups", webAppAzureAdConfig.WebViewerSecurityGroup));
+            });
 
             services.AddMvc(options =>
             {

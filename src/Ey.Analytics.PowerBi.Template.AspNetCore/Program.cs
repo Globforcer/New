@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace  Ey.Analytics.PowerBI.Templates
+namespace Ey.Analytics.PowerBI.Templates
 {
     public class Program
     {

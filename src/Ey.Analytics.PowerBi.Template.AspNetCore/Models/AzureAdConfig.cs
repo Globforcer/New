@@ -15,6 +15,7 @@ namespace  Ey.Analytics.PowerBI.Templates.Models
         public string TenantId { get; set; }
         public string ClientId { get; set; }
         public string RedirectUrl { get; set; }
+        public string WebViewerSecurityGroup { get; set; }
     }
 
 }

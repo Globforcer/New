@@ -6,14 +6,14 @@
 
 @if (!string.IsNullOrEmpty(Model.EmbedConfig.ErrorMessage))
 {
-    <div id="errorWrapper">
-        <h2>
-            Error
-        </h2>
-        <pre>
+<div id="errorWrapper">
+    <h2>
+        Error
+    </h2>
+    <pre>
         @Model.EmbedConfig.ErrorMessage
     </pre>
-    </div>
+</div>
 
     return;
 }
@@ -36,8 +36,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn nextbtn" data-toggle="modal" data-target="#modal-2" data-dismiss="modal">Continue</button>
                 <button type="button" class="btn cancelbtn" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn nextbtn" data-toggle="modal" data-target="#modal-2" data-dismiss="modal">Continue</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -117,8 +117,8 @@
                 <br>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn nextbtn" data-toggle="modal" data-target="#modal-3" data-dismiss="modal">Accept</button>
                 <button type="button" class="btn cancelbtn" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn nextbtn" data-toggle="modal" data-target="#modal-3" data-dismiss="modal">Accept</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -133,16 +133,196 @@
                 <h5 class="modal-title">Privacy Notice</h5>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
-            <div class="modal-body">
-                <p><b>EY’s Relationship with You</b></p>
-                If you are an EY client and you will use the Tool to access an EY report that was prepared pursuant to an engagement agreement between you and EY, your access to the Tool (and the contents thereof, including any such report) is subject to the terms and conditions of your engagement agreement with EY.
+            <div class="modal-body" id="modal3_body">
+                <span class="modal4data">1. Introduction</span>
                 <br><br>
-                If you are not an EY client, or if you are an EY client with respect to matters unrelated to your current access to the Tool, your access to the Tool (and the contents thereof, including any EY reports) is subject to these Terms of Use and, where applicable, the terms and conditions of the release letter agreed between you and EY.  In the event of any conflict between the terms of use set out in these Terms of Use and in any release letter, the terms set out in the release letter shall prevail. EY is providing the Tool to our client and performing our services under the terms of our agreement with our client. The scope of our services to our client is clear and distinct from that of any other advisor to the client and EY will act independently from any other advisor to our client (and, for the avoidance of doubt, any other third parties that are not EY’s direct subcontractors).  EY will not be held liable for any work performed or services rendered by other advisors. You expressly acknowledge that any instruction to perform your services through the EY Tool comes directly from our client and that any interaction between you and EY should be treated as incidental.  You acknowledge and agree that the Tool and its contents are intended only for EY’s client, and that you will not forward, distribute, reproduce, copy or publish any information contained in the Tool to any other person without our prior written consent.
+                <span class="modal4datatxt">This Privacy Notice is intended to describe the practices EY follows in relation to the Power BI Tool (the “Tool”) with respect to the privacy of all individuals whose personal data is processed and stored in the Tool.</span>
+                <br><br>
+                <span class="modal4data">2. Who manages the Tool?</span>
+                <br><br>
+                <span class="modal4datatxt">“EY” refers to one or more of the member firms of Ernst & Young Global Limited (“EYG”), each of which is a separate legal entity and can act as a data controller in its own right. The entity that is acting as data controller by providing this Tool on which your personal data will be processed and stored is EY Global Services Limited, that licenses the Tool from Microsoft Corporation, 6100 Neil Road, Suite 210, Reno, NV 89511, USA. </span>
+                <br><br>
+                <span class="modal4datatxt">The personal data you provide in the Tool is shared by EY Global Services Limited with one or more member firms of EYG (see “Who can access your information” section below).</span>
+                <br><br>
+                <span class="modal4datatxt">The tool is hosted in MS Azure data centers, with the particular hosting location determined based on the location of the engagement agreement and the associated data privacy regulations in place. While the primary hosting locations for client applications are Ireland, the Netherlands, US, and Australia, your client application instance may be hosted more locally in an MS Azure data centre at the request of your EY engagement team. To understand where the particular instance of the client application you are accessing is hosted, please refer to the your underlying engagement agreement with EY or reach out to your EY engagement team.</span>
+                <br><br>
+                <span class="modal4data">Why do we need your information?</span>
+                <br><br>
+                <span class="modal4datatxt">The Tool is a Power BI SaaS suite that enables analytics to be performed on a wide range of data sets and can be available to everyone globally in EY to perform data analytics.</span>
+                <br><br>
+                <span class="modal4datatxt">Personal Data relating to EY and client users is also processed by Azure Multi-Factor Authentication (“MFA”), which enables EY to provide an additional method of authentication to any service and/or application that requires secondary factors of security authentication, beyond a username and password.</span>
+                <br><br>
+                <span class="modal4datatxt">Your personal data processed in the Tool is used as follows:</span>
+                <br><br>
+                <ul>
+                    <li>User Information is used for log in and monitoring purposes. </li>
+                    <li>Dashboard Information is used to create reports and dashboards.</li>
+                </ul>
+                <span class="modal4datatxt">EY relies on the following basis to legitimize the processing of your personal data in the Tool: </span>
+                <br><br>
+                <span class="modal4datatxt">Processing is necessary for the purposes of the legitimate interests pursued by the data controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. The specific legitimate interest pursued is as follows: data analysis and visualization. However a variety of specific legitimate interests could be pursued depending on the use case or project (e.g. conducting client engagements, complying with regulatory and legal obligations; or quality and risk management purposes).</span>
+                <br><br>
+                <span class="modal4datatxt">The provision of your personal data to EY is optional. However, if you do not provide all or part of your personal data, we may be unable to carry out the purposes for processing. </span>
+                <br><br>
+                <span class="modal4data">3.	What type of personal data is processed in the Tool? </span>
+                <br><br>
+                <span class="modal4datatxt">The Tool processes these personal data categories:</span>
+                <br>
+                <ol>
+                    <li>Information relating to all users <b>(“User Information”)</b>.</li>
+                    <li>Data processed by Tool to generate dashboards <b>(“Dashboard Information”)</b>.</li>
+                    <li>Data processed for MFA purposes.</li>
+                </ol>
+                <br />
+                <span class="modal4datatxt"><u>1. User Information</u></span>
+                <ul>
+                    <li>
+                        <b>Log-in Details</b>
+                        <br />
+                        Access is given to the Tool based on Active Directory, using the single sign-on mechanism. These details include the name and email address of the user.
+                    </li>
+                    <li>
+                        <b>Log Data</b>
+                        <br />
+                        The Tool collects log data such as who the user is, and how long they use the platform for. Other audit records include, but are not limited to: authentication, users, tenants, SOC administrator, role, subscriptions, account, password, deployment policies, BSPs, maintenance/reserved mode, database migration, plugin operations, custom properties, add-ons, registry changes, log overrides, log deletions, timestamp, actor, IP address, operation, resource, previous and new value (including UX diffing visualization of the changes).
+                    </li>
+                </ul>
+                <span class="modal4datatxt"><u>2. Dashboard Information</u></span>
+                <ul>
+                    <li>The type of Personal Data will vary depending on the data processed by the Tool.</li>
+                </ul>
+                <span class="modal4datatxt"><u>3. MFA Information</u></span>
+                <ul>
+                    <li>Users enter their standard log-in password and then receive a bespoke verification code by SMS to their registered phone number.</li>
+                    <li>First name, Last name, email address and phone number are processed. </li>
+                </ul>
+                <br />
+                <span class="modal4datatxt"><b>Note: The system owners do not have the information regarding what Personal Data will processed by the Tool as Dashboard Information, since this depends on the individual use case of the Tool. The Tool will be used across EY in a large number of varying use cases, therefore a large number of different types of data may be processed as Dashboard Information.</b></span>
+                <br /><br />
+                <span class="modal4datatxt">This data is sourced from:</span>
+                <ul>
+                    <li>EY Partners, employees or contractors; </li>
+                    <li>Clients; or </li>
+                    <li>other Parties depending on the particular use case or application.</li>
+                </ul>
+                <br />
+                <span class="modal4datatxt">For User Information:</span>
+                <br /><br />
+                <ul>
+                    <li>EY personnel log in information, email addresses, and first and last names will be provided directly by EY employees.</li>
+                    <li>Client personnel email addresses and first and last names will be provided by client personnel.</li>
+                </ul>
+                <br />
+                <span class="modal4data">4.	Sensitive Personal Data</span>
+                <br /><br />
+                <span class="modal4datatxt">Sensitive personal data reveals your racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, data concerning health or data concerning sex life or sexual orientation.</span>
+                <br /><br />
+                <span class="modal4datatxt">EY does not intentionally collect any sensitive personal data from you via the Tool. The Tool’s intention is not to process such information. However the Tool will be used across EY in a large number of varying use cases. It is therefore possible that sensitive personal data will be processed as Dashboard Information.</span>
+                <br /><br />
+                <span class="modal4data">5.	Who can access your information?</span>
+                <br /><br />
+                <span class="modal4datatxt">Your personal data is accessed in the Tool by the following persons/teams:</span>
+                <br />
+                <span class="modal4datatxt">EY:</span>
+                <br />
+                <ul>
+                    <li>EY Users; and</li>
+                    <li>EY Administrators.</li>
+                </ul>
+                <span class="modal4datatxt">Third Parties:</span>
+                <br />
+                <ul>
+                    <li>Client Users;</li>
+                    <li>Microsoft; and</li>
+                    <li>Other parties - other individuals can be given access to output from the Tool if required by a particular use case.</li>
+                </ul>
+                <br />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Location</th>
+                            <th>Purpose for which access is required</th>
+                            <th>Level of access rights (e.g. read-only, edit, delete)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EY Users</td>
+                            <td>Global</td>
+                            <td>Create, publish, consume Power BI content</td>
+                            <td>Read, write and delete rights (if so authorised by EY Administrators).</td>
+                        </tr>
+                        <tr>
+                            <td>EY Administrators</td>
+                            <td>US, Argentina, India, Mexico, UK, Poland.</td>
+                            <td>To administer and maintain access to the platform. To ensure that the Tool functions properly.</td>
+                            <td>Read, edit and delete rights.</td>
+                        </tr>
+                        <tr>
+                            <td>Client Users</td>
+                            <td>Global</td>
+                            <td>To read reports.</td>
+                            <td>Read, write and delete rights (if so authorised by EY Administrators).</td>
+                        </tr>
+                        <tr>
+                            <td>Vendor (Microsoft)</td>
+                            <td>Global</td>
+                            <td>Troubleshooting and Servicing purposes</td>
+                            <td>Read, edit and delete rights (if so authorised by EY Administrators).</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>Global</td>
+                            <td>This depends on the aims of a particular project or use case.</td>
+                            <td>This depends on the aims of a particular project or use case.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <span class="modal4datatxt">The access rights detailed above involves transferring personal data in various jurisdictions (including jurisdictions outside the European Union) in which EY operates (EY office locations are listed at www.ey.com/ourlocations). EY will process your personal data in the Tool in accordance with applicable law and professional regulations in your jurisdiction. Transfers of personal data within the EY network are governed by EY’s Binding Corporate Rules (www.ey.com/bcr).</span>
+                <br><br>
+                <span class="modal4data">6.	Data retention</span>
+                <br /><br />
+                <span class="modal4datatxt">The policies and/or procedures for the retention of personal data in the Tool are:</span>
+                <br /><br />
+                <span class="modal4datatxt">Data is retained only in line with EY business need:</span>
+                <ul>
+                    <li>User Information - stored for 90 days.</li>
+                    <li>Dashboard Information - this depends on the particular application or use case. Please note that each new use case or application of the Tool will be subject to the Use Case Approach, which is a process that determines, for each new use case, whether a PIA should be conducted.</li>
+                </ul>
+                <br />
+                <span class="modal4datatxt">
+                    Your personal data will be retained in compliance with privacy laws and regulations.
+                    <br />
+                    After the end of the data retention period, your personal data will be deleted.
+                </span>
+                <br /><br />
+                <span class="modal4data">7. Security</span>
+                <br /><br />
+                <span class="modal4datatxt">EY is committed to making sure your personal data is secure. To prevent unauthorized access or disclosure, EY has technical and organizational measures to safeguard and secure your personal data. All EY personnel and third parties EY engages to process your personal data are obliged to respect your data’s confidentiality.</span>
+                <br /><br />
+                <span class="modal4data">8. Controlling your personal data</span>
+                <br /><br />
+                <span class="modal4datatxt">EY will not transfer your personal data to third parties (other than any external parties referred to in section 6 above) unless we have your permission or are required by law to do so.</span>
+                <span class="modal4datatxt">You are legally entitled to request details of EY’s personal data about you. </span>
+                <span class="modal4datatxt">To confirm whether your personal data is processed in the Tool or to access your personal data in the Tool, contact your usual EY representative or email your request to global.data.protection@ey.com.</span>
+                <br /><br />
+                <span class="modal4data">9.	Rectification, erasure, restriction of processing or data portability</span>
+                <br /><br />
+                <span class="modal4datatxt">You can confirm your personal data is accurate and current. You can request rectification, erasure, restriction of processing or a readily portable copy of your personal data by contacting your usual EY representative or by sending an e-mail to global.data.protection@ey.com.</span>
+                <br /><br />
+                <span class="modal4data">10. Complaints</span>
+                <br /><br />
+                <span class="modal4datatxt">If you are concerned about an alleged breach of privacy law or any other regulation, contact EY’s Global Privacy Leader, Office of the General Counsel, 6 More London Place, London, SE1 2DA, United Kingdom or via email at global.data.protection@ey.com or via your usual EY representative. An EY Privacy Officer will investigate your complaint and provide information about how it will be handled and resolved.</span>
+                <span class="modal4datatxt">If you are not satisfied with how EY resolved your complaint, you have the right to complain to your country’s data protection authority. You can also refer the matter to a court of competent jurisdiction.  </span>
+                <br /><br />
+                <span class="modal4data">11. Contact us</span>
+                <span class="modal4datatxt">If you have additional questions or concerns, contact your usual EY representative or email  global.data.protection@ey.com.</span>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn nextbtn" data-dismiss="modal" onclick="acceptTermsAndConditions()">Accept</button>
                 <button type="button" class="btn cancelbtn" data-dismiss="modal">Cancel</button>
-
+                <button type="button" class="btn nextbtn" data-dismiss="modal" onclick="acceptTermsAndConditions()">Accept</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -211,7 +391,7 @@
                 <br>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn cancelbtn mr-auto" data-dismiss="modal">OK</button>
+                <button type="button" class="btn cancelbtn" data-dismiss="modal">OK</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -222,17 +402,198 @@
     <div class="modal-dialog" id="modal-5-dialog">
         <div class="modal-content" id="modal-5-content">
             <div class="modal-header">
-                <h4 class="modal-title">Privacy Notes</h4>
+                <h4 class="modal-title">Privacy Notice</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body" id="modal2_body">
-                <p><b>EY’s Relationship with You</b></p>
-                If you are an EY client and you will use the Tool to access an EY report that was prepared pursuant to an engagement agreement between you and EY, your access to the Tool (and the contents thereof, including any such report) is subject to the terms and conditions of your engagement agreement with EY.
+                <span class="modal4data">1. Introduction</span>
                 <br><br>
-                If you are not an EY client, or if you are an EY client with respect to matters unrelated to your current access to the Tool, your access to the Tool (and the contents thereof, including any EY reports) is subject to these Terms of Use and, where applicable, the terms and conditions of the release letter agreed between you and EY. In the event of any conflict between the terms of use set out in these Terms of Use and in any release letter, the terms set out in the release letter shall prevail. EY is providing the Tool to our client and performing our services under the terms of our agreement with our client. The scope of our services to our client is clear and distinct from that of any other advisor to the client and EY will act independently from any other advisor to our client (and, for the avoidance of doubt, any other third parties that are not EY’s direct subcontractors). EY will not be held liable for any work performed or services rendered by other advisors. You expressly acknowledge that any instruction to perform your services through the EY Tool comes directly from our client and that any interaction between you and EY should be treated as incidental. You acknowledge and agree that the Tool and its contents are intended only for EY’s client, and that you will not forward, distribute, reproduce, copy or publish any information contained in the Tool to any other person without our prior written consent.
+                <span class="modal4datatxt">This Privacy Notice is intended to describe the practices EY follows in relation to the Power BI Tool (the “Tool”) with respect to the privacy of all individuals whose personal data is processed and stored in the Tool.</span>
+                <br><br>
+                <span class="modal4data">2. Who manages the Tool?</span>
+                <br><br>
+                <span class="modal4datatxt">“EY” refers to one or more of the member firms of Ernst & Young Global Limited (“EYG”), each of which is a separate legal entity and can act as a data controller in its own right. The entity that is acting as data controller by providing this Tool on which your personal data will be processed and stored is EY Global Services Limited, that licenses the Tool from Microsoft Corporation, 6100 Neil Road, Suite 210, Reno, NV 89511, USA. </span>
+                <br><br>
+                <span class="modal4datatxt">The personal data you provide in the Tool is shared by EY Global Services Limited with one or more member firms of EYG (see “Who can access your information” section below).</span>
+                <br><br>
+                <span class="modal4datatxt">The tool is hosted in MS Azure data centers, with the particular hosting location determined based on the location of the engagement agreement and the associated data privacy regulations in place. While the primary hosting locations for client applications are Ireland, the Netherlands, US, and Australia, your client application instance may be hosted more locally in an MS Azure data centre at the request of your EY engagement team. To understand where the particular instance of the client application you are accessing is hosted, please refer to the your underlying engagement agreement with EY or reach out to your EY engagement team.</span>
+                <br><br>
+                <span class="modal4data">Why do we need your information?</span>
+                <br><br>
+                <span class="modal4datatxt">The Tool is a Power BI SaaS suite that enables analytics to be performed on a wide range of data sets and can be available to everyone globally in EY to perform data analytics.</span>
+                <br><br>
+                <span class="modal4datatxt">Personal Data relating to EY and client users is also processed by Azure Multi-Factor Authentication (“MFA”), which enables EY to provide an additional method of authentication to any service and/or application that requires secondary factors of security authentication, beyond a username and password.</span>
+                <br><br>
+                <span class="modal4datatxt">Your personal data processed in the Tool is used as follows:</span>
+                <br><br>
+                <ul>
+                    <li>User Information is used for log in and monitoring purposes. </li>
+                    <li>Dashboard Information is used to create reports and dashboards.</li>
+                </ul>
+                <span class="modal4datatxt">EY relies on the following basis to legitimize the processing of your personal data in the Tool: </span>
+                <br><br>
+                <span class="modal4datatxt">Processing is necessary for the purposes of the legitimate interests pursued by the data controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. The specific legitimate interest pursued is as follows: data analysis and visualization. However a variety of specific legitimate interests could be pursued depending on the use case or project (e.g. conducting client engagements, complying with regulatory and legal obligations; or quality and risk management purposes).</span>
+                <br><br>
+                <span class="modal4datatxt">The provision of your personal data to EY is optional. However, if you do not provide all or part of your personal data, we may be unable to carry out the purposes for processing. </span>
+                <br><br>
+                <span class="modal4data">3.	What type of personal data is processed in the Tool? </span>
+                <br><br>
+                <span class="modal4datatxt">The Tool processes these personal data categories:</span>
+                <br>
+                <ol>
+                    <li>Information relating to all users <b>(“User Information”)</b>.</li>
+                    <li>Data processed by Tool to generate dashboards <b>(“Dashboard Information”)</b>.</li>
+                    <li>Data processed for MFA purposes.</li>
+                </ol>
+                <br />
+                <span class="modal4datatxt"><u>1. User Information</u></span>
+                <ul>
+                    <li>
+                        <b>Log-in Details</b>
+                        <br />
+                        Access is given to the Tool based on Active Directory, using the single sign-on mechanism. These details include the name and email address of the user.
+                    </li>
+                    <li>
+                        <b>Log Data</b>
+                        <br />
+                        The Tool collects log data such as who the user is, and how long they use the platform for. Other audit records include, but are not limited to: authentication, users, tenants, SOC administrator, role, subscriptions, account, password, deployment policies, BSPs, maintenance/reserved mode, database migration, plugin operations, custom properties, add-ons, registry changes, log overrides, log deletions, timestamp, actor, IP address, operation, resource, previous and new value (including UX diffing visualization of the changes).
+                    </li>
+                </ul>
+                <span class="modal4datatxt"><u>2. Dashboard Information</u></span>
+                <ul>
+                    <li>The type of Personal Data will vary depending on the data processed by the Tool.</li>
+                </ul>
+                <span class="modal4datatxt"><u>3. MFA Information</u></span>
+                <ul>
+                    <li>Users enter their standard log-in password and then receive a bespoke verification code by SMS to their registered phone number.</li>
+                    <li>First name, Last name, email address and phone number are processed. </li>
+                </ul>
+                <br />
+                <span class="modal4datatxt"><b>Note: The system owners do not have the information regarding what Personal Data will processed by the Tool as Dashboard Information, since this depends on the individual use case of the Tool. The Tool will be used across EY in a large number of varying use cases, therefore a large number of different types of data may be processed as Dashboard Information.</b></span>
+                <br /><br />
+                <span class="modal4datatxt">This data is sourced from:</span>
+                <ul>
+                    <li>EY Partners, employees or contractors; </li>
+                    <li>Clients; or </li>
+                    <li>other Parties depending on the particular use case or application.</li>
+                </ul>
+                <br />
+                <span class="modal4datatxt">For User Information:</span>
+                <br /><br />
+                <ul>
+                    <li>EY personnel log in information, email addresses, and first and last names will be provided directly by EY employees.</li>
+                    <li>Client personnel email addresses and first and last names will be provided by client personnel.</li>
+                </ul>
+                <br />
+                <span class="modal4data">4.	Sensitive Personal Data</span>
+                <br /><br />
+                <span class="modal4datatxt">Sensitive personal data reveals your racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, data concerning health or data concerning sex life or sexual orientation.</span>
+                <br /><br />
+                <span class="modal4datatxt">EY does not intentionally collect any sensitive personal data from you via the Tool. The Tool’s intention is not to process such information. However the Tool will be used across EY in a large number of varying use cases. It is therefore possible that sensitive personal data will be processed as Dashboard Information.</span>
+                <br /><br />
+                <span class="modal4data">5.	Who can access your information?</span>
+                <br /><br />
+                <span class="modal4datatxt">Your personal data is accessed in the Tool by the following persons/teams:</span>
+                <br />
+                <span class="modal4datatxt">EY:</span>
+                <br />
+                <ul>
+                    <li>EY Users; and</li>
+                    <li>EY Administrators.</li>
+                </ul>
+                <span class="modal4datatxt">Third Parties:</span>
+                <br />
+                <ul>
+                    <li>Client Users;</li>
+                    <li>Microsoft; and</li>
+                    <li>Other parties - other individuals can be given access to output from the Tool if required by a particular use case.</li>
+                </ul>
+                <br />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Location</th>
+                            <th>Purpose for which access is required</th>
+                            <th>Level of access rights (e.g. read-only, edit, delete)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EY Users</td>
+                            <td>Global</td>
+                            <td>Create, publish, consume Power BI content</td>
+                            <td>Read, write and delete rights (if so authorised by EY Administrators).</td>
+                        </tr>
+                        <tr>
+                            <td>EY Administrators</td>
+                            <td>US, Argentina, India, Mexico, UK, Poland.</td>
+                            <td>To administer and maintain access to the platform. To ensure that the Tool functions properly.</td>
+                            <td>Read, edit and delete rights.</td>
+                        </tr>
+                        <tr>
+                            <td>Client Users</td>
+                            <td>Global</td>
+                            <td>To read reports.</td>
+                            <td>Read, write and delete rights (if so authorised by EY Administrators).</td>
+                        </tr>
+                        <tr>
+                            <td>Vendor (Microsoft)</td>
+                            <td>Global</td>
+                            <td>Troubleshooting and Servicing purposes</td>
+                            <td>Read, edit and delete rights (if so authorised by EY Administrators).</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>Global</td>
+                            <td>This depends on the aims of a particular project or use case.</td>
+                            <td>This depends on the aims of a particular project or use case.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <span class="modal4datatxt">The access rights detailed above involves transferring personal data in various jurisdictions (including jurisdictions outside the European Union) in which EY operates (EY office locations are listed at www.ey.com/ourlocations). EY will process your personal data in the Tool in accordance with applicable law and professional regulations in your jurisdiction. Transfers of personal data within the EY network are governed by EY’s Binding Corporate Rules (www.ey.com/bcr).</span>
+                <br><br>
+                <span class="modal4data">6.	Data retention</span>
+                <br /><br />
+                <span class="modal4datatxt">The policies and/or procedures for the retention of personal data in the Tool are:</span>
+                <br /><br />
+                <span class="modal4datatxt">Data is retained only in line with EY business need:</span>
+                <ul>
+                    <li>User Information - stored for 90 days.</li>
+                    <li>Dashboard Information - this depends on the particular application or use case. Please note that each new use case or application of the Tool will be subject to the Use Case Approach, which is a process that determines, for each new use case, whether a PIA should be conducted.</li>
+                </ul>
+                <br />
+                <span class="modal4datatxt">
+                    Your personal data will be retained in compliance with privacy laws and regulations.
+                    <br />
+                    After the end of the data retention period, your personal data will be deleted.
+                </span>
+                <br /><br />
+                <span class="modal4data">7. Security</span>
+                <br /><br />
+                <span class="modal4datatxt">EY is committed to making sure your personal data is secure. To prevent unauthorized access or disclosure, EY has technical and organizational measures to safeguard and secure your personal data. All EY personnel and third parties EY engages to process your personal data are obliged to respect your data’s confidentiality.</span>
+                <br /><br />
+                <span class="modal4data">8. Controlling your personal data</span>
+                <br /><br />
+                <span class="modal4datatxt">EY will not transfer your personal data to third parties (other than any external parties referred to in section 6 above) unless we have your permission or are required by law to do so.</span>
+                <span class="modal4datatxt">You are legally entitled to request details of EY’s personal data about you. </span>
+                <span class="modal4datatxt">To confirm whether your personal data is processed in the Tool or to access your personal data in the Tool, contact your usual EY representative or email your request to global.data.protection@ey.com.</span>
+                <br /><br />
+                <span class="modal4data">9.	Rectification, erasure, restriction of processing or data portability</span>
+                <br /><br />
+                <span class="modal4datatxt">You can confirm your personal data is accurate and current. You can request rectification, erasure, restriction of processing or a readily portable copy of your personal data by contacting your usual EY representative or by sending an e-mail to global.data.protection@ey.com.</span>
+                <br /><br />
+                <span class="modal4data">10. Complaints</span>
+                <br /><br />
+                <span class="modal4datatxt">If you are concerned about an alleged breach of privacy law or any other regulation, contact EY’s Global Privacy Leader, Office of the General Counsel, 6 More London Place, London, SE1 2DA, United Kingdom or via email at global.data.protection@ey.com or via your usual EY representative. An EY Privacy Officer will investigate your complaint and provide information about how it will be handled and resolved.</span>
+                <span class="modal4datatxt">If you are not satisfied with how EY resolved your complaint, you have the right to complain to your country’s data protection authority. You can also refer the matter to a court of competent jurisdiction.  </span>
+                <br /><br />
+                <span class="modal4data">11. Contact us</span>
+                <span class="modal4datatxt">If you have additional questions or concerns, contact your usual EY representative or email  global.data.protection@ey.com.</span>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn cancelbtn mr-auto" data-dismiss="modal">OK</button>
+                <button type="button" class="btn cancelbtn" data-dismiss="modal">OK</button>
             </div>
         </div>
         <!-- /.modal-content -->

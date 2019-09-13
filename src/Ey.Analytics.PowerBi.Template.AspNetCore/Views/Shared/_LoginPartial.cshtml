@@ -7,6 +7,20 @@
         <li class="nav-item">
             <span class="nav-text nav-link text-light">Hello @ViewBag.Username!</span>
         </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+                <i class="material-icons" style="color:white">expand_more</i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" asp-area="AzureAD" asp-controller="Account" asp-action="SignOut">Log out</a>
+                @*<span data-toggle="modal" data-target="#modal-4">
+                    <a href="#" class="dropdown-item">Terms and Conditions</a>
+                </span>
+                <span data-toggle="modal" data-target="#modal-5">
+                    <a href="#" class="dropdown-item">Privacy Notice</a>
+                </span>*@
+            </div>
+        </li>
         <li>
             <div class="circle">
                 <span class="initials">@ViewBag.UserInitials</span>
