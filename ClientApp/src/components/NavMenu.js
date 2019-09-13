@@ -26,8 +26,8 @@ export class NavMenu extends Component {
             <header>
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
                     <Container>
-                        <img src={`${document.baseURI}img/EYLogo.svg`} style={{ height: 70}} />
-                        <NavbarBrand tag={Link} to="/">AdvanceAnalytics PowerBIApp</NavbarBrand>
+                        <img src={`${document.baseURI}img/EYLogo.svg`} alt="" style={{ height: 70, marginRight:10}} />
+                        <NavbarBrand tag={Link} to="/">PowerBI WebApp</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
@@ -39,6 +39,9 @@ export class NavMenu extends Component {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} className="text-dark" to="/powerbi">PowerBI Demo</NavLink>
                                 </NavItem>
                             </ul>
                         </Collapse>

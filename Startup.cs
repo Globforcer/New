@@ -69,6 +69,14 @@ namespace AdvanceAnalytics_WebTemplate
                 ContentTypeProvider = provider
             });
 
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+           Path.Combine(Directory.GetCurrentDirectory(), "ClientApp", "scripts")),
+                RequestPath = "/scripts",
+                ContentTypeProvider = provider
+            });
+
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
