@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvanceAnalytics-WebTemplate", "AdvanceAnalytics-WebTemplate.csproj", "{7EED58B6-D797-4E92-BD10-A5EB44173684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceAnalytics-WebTemplate.Logic", "AdvanceAnalytics-WebTemplate.Logic\AdvanceAnalytics-WebTemplate.Logic.csproj", "{08249F0D-ADC9-4007-8EC9-53770EBE71ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvanceAnalytics-WebTemplate.Logic", "AdvanceAnalytics-WebTemplate.Logic\AdvanceAnalytics-WebTemplate.Logic.csproj", "{08249F0D-ADC9-4007-8EC9-53770EBE71ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvanceAnalytics-WebTemplate.Models", "AdvanceAnalytics-WebTemplate.Models\AdvanceAnalytics-WebTemplate.Models.csproj", "{35F02B94-C6BD-4EDA-A639-0AF41F0D27EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{08249F0D-ADC9-4007-8EC9-53770EBE71ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08249F0D-ADC9-4007-8EC9-53770EBE71ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08249F0D-ADC9-4007-8EC9-53770EBE71ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F02B94-C6BD-4EDA-A639-0AF41F0D27EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F02B94-C6BD-4EDA-A639-0AF41F0D27EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F02B94-C6BD-4EDA-A639-0AF41F0D27EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F02B94-C6BD-4EDA-A639-0AF41F0D27EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
