@@ -1,12 +1,12 @@
-import React, {useEffect, Fragment} from 'react';
+import React, {useEffect} from 'react';
 import * as pbi from 'powerbi-client';
+import './Report.css';
 
 const Report = (props) => {
 
   useEffect(() => {
     var models = pbi.models;
     var permissions = models.Permissions.All;
-    debugger;
     var config = {
         type: 'report',
         tokenType: models.TokenType.Embed,
@@ -26,7 +26,7 @@ const Report = (props) => {
   });
 
   return (
-    <div id="report"></div>
+    <div className="report" id="report"></div>
   );
 };
 
