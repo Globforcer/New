@@ -28,7 +28,7 @@ const env = getClientEnvironment(publicUrl);
 module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
@@ -84,10 +84,11 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-      
-      // Support React Native Web
-      // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      'react-native': 'react-native-web',
+      services: path.resolve(__dirname, '../src/services/'),
+      constants: path.resolve(__dirname, '../src/constants/'),
+      actions: path.resolve(__dirname, '../src/actions/'),
+      components: path.resolve(__dirname, '../src/components/'),
+      views: path.resolve(__dirname, '../src/views/')
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
