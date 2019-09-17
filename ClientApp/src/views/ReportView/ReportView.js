@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as pbi from 'powerbi-client';
 import Report from 'components/Report/Report';
 
 export class DemoReport extends Component {
