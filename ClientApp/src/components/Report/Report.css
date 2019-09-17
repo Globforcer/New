@@ -1,23 +1,23 @@
 @media (min-width: 576px){
   .report {
-    height: calc(540px * 0.5);
+    height: calc(540px * 0.59);
   }
 }
 
 @media (min-width: 768px){
   .report {
-    height: calc(720px * 0.5);
+    height: calc(720px * 0.59);
   }
 }
 
 @media (min-width: 992px){
   .report {
-    height: calc(960px * 0.5);
+    height: calc(960px * 0.59);
   }
 }
 
 @media (min-width: 1200px){
   .report {
-    height: calc(1140px * 0.5);
+    height: calc(1140px * 0.59);
   }
 }

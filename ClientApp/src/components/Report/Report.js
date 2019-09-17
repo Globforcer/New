@@ -19,14 +19,15 @@ const Report = (props) => {
             navContentPaneEnabled: true,
         }
     }
-    var report = window['powerbi'].embed(document.getElementById("report"), config);
+    var report = window['powerbi'].embed(document.getElementById(props.id), config);
     report.on("loaded", () => {
         report.updateSettings({ bookmarksPaneEnabled: true })
     });
+    return (() => report.off('loaded'));
   });
 
   return (
-    <div className="report" id="report"></div>
+    <div className="report" id={props.id}></div>
   );
 };
 
