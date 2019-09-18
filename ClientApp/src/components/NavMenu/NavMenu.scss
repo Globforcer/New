@@ -1,4 +1,6 @@
-﻿a.navbar-brand {
+﻿@import '../../scss/_colors.scss';
+
+a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
@@ -25,7 +27,7 @@ html {
 }
 
 .navbar {
-  background-color: #333333;
+  background-color: $color-header-background;
 }
 
 .navbar-title {
@@ -34,9 +36,9 @@ html {
 }
 
 .ey-logo {
-  min-height: 36px;
+    min-height: 36px;
     margin-left: 10px;
-    border-right: 1px solid white;
+    border-right: 1px solid $color-white;
     padding-right: 14px;
     padding-left: 14px;
 }
