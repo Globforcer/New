@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AdvanceAnalytics_WebTemplate.Controllers
@@ -13,6 +14,13 @@ namespace AdvanceAnalytics_WebTemplate.Controllers
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
+
+        [HttpGet("[action]")]
+        public JsonResult Text()
+        {
+            return this.Json(new { a = "Hola" });
+        }
+
 
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
