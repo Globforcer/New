@@ -7,19 +7,24 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdvanceAnalytics_WebTemplate.Controllers
 {
-    
+
+    [Authorize]
+    [Route("api/[controller]")]
     public class HomeController : Controller
     {
-        [Authorize]
-        public ActionResult Index()
-        {
-            return Redirect("~/ClientApp/public/index.html");
-        }
+
 
         public ActionResult LogOut()
         {
             this.SignOut();
             return RedirectToAction("Index");
         }
+
+        [HttpGet("[action]")]
+        public JsonResult UserDetail()
+        {
+            return this.Json((new { email = HttpContext.User.Identity.Name, name= HttpContext.User.Claims.Where(o => o.Type == "name").FirstOrDefault().Value }));
+        }
+
     }
 }

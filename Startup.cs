@@ -22,7 +22,7 @@ namespace AdvanceAnalytics_WebTemplate
         {
             Configuration = configuration;
         }
-        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -42,7 +42,7 @@ namespace AdvanceAnalytics_WebTemplate
             {
                 var policy = new AuthorizationPolicyBuilder()
                     .RequireAuthenticatedUser()
-                    .Build();
+                    .Build();   
                 options.Filters.Add(new AuthorizeFilter(policy));
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -69,16 +69,15 @@ namespace AdvanceAnalytics_WebTemplate
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseSpaStaticFiles();
-            app.UseCookiePolicy();
             app.UseAuthentication();
+            app.UseCookiePolicy();
+            app.UseSpaStaticFiles();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller}/{action=Index}/{id?}");
             });
 
             var provider = new FileExtensionContentTypeProvider();
@@ -88,12 +87,23 @@ namespace AdvanceAnalytics_WebTemplate
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
-            Path.Combine(Directory.GetCurrentDirectory(), "ClientApp", "img")),
+                Path.Combine(Directory.GetCurrentDirectory(), "ClientApp", "img")),
                 RequestPath = "/img",
                 ContentTypeProvider = provider
             });
 
-            app.UseStaticFiles();
+            app.Use(async (context, next) =>
+            {
+                if (!context.User.Identity.IsAuthenticated)
+                {
+                    await context.ChallengeAsync("AzureAD");
+                }
+                else
+                {
+                    await next();
+                }
+            });
+
 
             app.UseSpa(spa =>
             {
